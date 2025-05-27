@@ -59,7 +59,7 @@ func checkNameOrigValutes(userValutes string) string {
 		if userValutes == "USD" || userValutes == "EUR" || userValutes == "RUB" {
 			return userValutes
 		} else {
-			fmt.Println("Невернная валюта, повторите ввод: ")
+			fmt.Println("Неверная валюта, повторите ввод: ")
 			fmt.Scan(&userValutes)
 		}
 	}
@@ -67,10 +67,10 @@ func checkNameOrigValutes(userValutes string) string {
 
 func checkNameTargetValutes(userOrigValutes string, userTargetValutes string) string {
 	for {
-		if userTargetValutes == "USD" || userTargetValutes == "EUR" || userTargetValutes == "RUB" && userTargetValutes != userOrigValutes {
+		if (userTargetValutes == "USD" || userTargetValutes == "EUR" || userTargetValutes == "RUB") && userTargetValutes != userOrigValutes {
 			return userTargetValutes
 		} else {
-			fmt.Println("Невернная валюта, повторите ввод: ")
+			fmt.Println("Неверная валюта, повторите ввод: ")
 			fmt.Scan(&userTargetValutes)
 		}
 	}
@@ -81,7 +81,7 @@ func checkValue(userValue float64) float64 {
 		if userValue > 0 {
 			return userValue
 		} else {
-			fmt.Println("Невернное количество валюты, повторите ввод:")
+			fmt.Println("Неверное количество валюты, повторите ввод:")
 			fmt.Scan(&userValue)
 		}
 	}
